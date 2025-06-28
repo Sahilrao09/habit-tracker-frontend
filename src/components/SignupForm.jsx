@@ -16,7 +16,7 @@ const SignupForm = ({ onSignup }) => {
 
     try {
       const res = await fetch(
-        "https://habit-tracker-backend-x7ed.onrender.com/register",
+        "https://habit-tracker-backend-x7ed.onrender.com/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
