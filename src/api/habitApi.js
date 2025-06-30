@@ -1,7 +1,8 @@
 import axios from "axios";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 const API = axios.create({
-  baseURL: "https://habit-tracker-backend-x7ed.onrender.com/",
+  baseURL: `${API_BASE}`,
 });
 
 // 🚀 Automatically attach token to every request

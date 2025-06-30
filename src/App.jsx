@@ -7,6 +7,7 @@ import {
 import { useState, useEffect } from "react";
 import AuthPage from "./components/AuthPage";
 import HabitPage from "./components/HabitPage";
+import Home from "./components/Home";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -33,6 +34,7 @@ const App = () => {
           path="/habits"
           element={user ? <HabitPage /> : <Navigate to="/" />}
         />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );

@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 const LoginForm = ({ onLogin }) => {
   const [formData, setFormData] = useState({ username: "", password: "" });
@@ -16,14 +17,11 @@ const LoginForm = ({ onLogin }) => {
 
     // Call your backend login API
     try {
-      const res = await fetch(
-        "https://habit-tracker-backend-x7ed.onrender.com/auth/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
-      );
+      const res = await fetch(`${API_BASE}/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       const data = await res.json();
       if (res.ok) {
