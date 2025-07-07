@@ -9,20 +9,19 @@ const AuthPage = ({ onAuth }) => {
 
   const handleAuth = (user) => {
     console.log("Authenticated user:", user);
-    // Navigate or set user context here
     onAuth(user);
     navigate("/habits");
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-[#151414] text-white flex flex-col items-center justify-center px-4">
       {isLogin ? (
         <>
           <LoginForm onLogin={handleAuth} />
-          <p className="mt-4 text-sm">
-            Don't have an account?{" "}
+          <p className="mt-4 text-sm text-white">
+            Don&apos;t have an account?{" "}
             <button
-              className="text-blue-500 hover:underline"
+              className="text-yellow-400 hover:underline font-medium"
               onClick={() => setIsLogin(false)}
             >
               Sign Up
@@ -32,10 +31,10 @@ const AuthPage = ({ onAuth }) => {
       ) : (
         <>
           <SignupForm onSignup={handleAuth} />
-          <p className="mt-4 text-sm">
+          <p className="mt-4 text-sm text-white">
             Already have an account?{" "}
             <button
-              className="text-blue-500 hover:underline"
+              className="text-yellow-400 hover:underline font-medium"
               onClick={() => setIsLogin(true)}
             >
               Log In

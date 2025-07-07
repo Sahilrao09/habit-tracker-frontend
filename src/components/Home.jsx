@@ -3,6 +3,7 @@ import GradientText from "./ui/GradientText";
 import ClickSpark from "./ui/ClickSpark";
 import SpotlightCard from "./ui/SpotlightCard";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -53,10 +54,11 @@ const Home = () => {
               textAlign="center"
             />
           </div>
-
-          <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition cursor-pointer">
-            Get Started!
-          </button>
+          <Link to="/">
+            <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition cursor-pointer">
+              Get Started!
+            </button>
+          </Link>
         </div>
 
         <div className="pt-6">
