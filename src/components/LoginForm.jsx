@@ -44,7 +44,7 @@ const LoginForm = ({ onLogin }) => {
             value={formData.username}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 rounded border-2 border-gray-600 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 rounded border border-gray-600 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div>
@@ -58,7 +58,7 @@ const LoginForm = ({ onLogin }) => {
             value={formData.password}
             onChange={handleChange}
             required
-            className="w-full px-3 py-2 rounded border-2 border-gray-600 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 rounded border border-gray-600 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <button
